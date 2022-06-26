@@ -1,7 +1,7 @@
 'use strict';
 
 // eslint-disable-next-line no-undef
-const dataUrl = fetch('http://myjson.dit.upm.es/api/bins/ckb3');
+const dataUrl = fetch('https://myjson.dit.upm.es/api/bins/ckb3');
 
 dataUrl
   .then(response => response.json())

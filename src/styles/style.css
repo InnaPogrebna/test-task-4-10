@@ -178,7 +178,7 @@ main {
   margin-top: 31px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(0deg, #130999 -0.01%, #174d8f 35.01%,
-    #1a7f87 64.91%, #1c9e83 87.44%, #1daa81 99.99%);
+  #1a7f87 64.91%, #1c9e83 87.44%, #1daa81 99.99%);
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -209,7 +209,7 @@ main {
 .footer {
   background-color: var(--color-font);
   height: 70px;
-	width: 100%;
+  width: 100%;
   flex-shrink: 0;
 }
 
