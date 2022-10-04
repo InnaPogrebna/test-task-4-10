@@ -1,0 +1,64 @@
+.accordion {
+  width: 312px;
+  margin-top: -2px;
+  transform: translateY(-600%);
+  opacity: 0;
+  animation: moveTop 0.3s ease forwards;
+  animation-delay: 2.4s;
+
+  &-button {
+    background-color: $colorGray;
+    @extend %Stolzl-Regular;
+    font-size: 14px;
+    color: $colorGrayMedium;
+    padding-left: 25px;
+
+    &:not(.collapsed) {
+      @extend %Stolzl-Regular;
+      font-size: 14px;
+      color: $colorHeaderAccordion;
+      background-color: $colorGray;
+    }
+
+    &::after {
+      background-image: url("../images/arrow-down.svg");
+      position: relative;
+      top: 6px;
+      margin-right: 4px;
+    }
+
+    &:not(.collapsed)::after {
+      background-image: url("../images/arrow-down.svg");
+      margin-top: -17px;
+      margin-right: 3px;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+
+  &-item {
+    border: none;
+    outline: 1px solid $colorGray;
+    margin-bottom: 4px;
+
+    &:first-of-type {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &-body {
+    margin-bottom: 7px;
+    @extend %Stolzl-Regular;
+    color: $colorLightGray;
+    font-size: 12px;
+  }
+}

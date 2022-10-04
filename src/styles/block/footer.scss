@@ -1,0 +1,52 @@
+.footer {
+  &__wrapper {
+    background-color: $colorGray;
+    margin-top: 112px;
+  }
+
+  &__container {
+    gap: 17px;
+    padding: 71px 21px;
+    border-bottom: 1px solid $colorRangeLight;
+
+    @media (max-width: 1400px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list {
+    gap: 12px;
+    margin-left: -21px;
+
+    &-item {
+      @extend %Stolzl-Regular;
+      font-size: 14px;
+      line-height: 21px;
+      color: $colotTextGray;
+
+      @media (max-width: 992px) {
+        font-size: 10px;
+      }
+    }
+
+    &-img {
+      background-image: url("../images/google-play.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 143.17px;
+      height: 42.4px;
+    }
+  }
+
+  &__copyright {
+    background-color: $colorGray;
+    padding: 37px 0;
+
+    &-text {
+      @extend %Stolzl-Regular;
+      font-size: 12px;
+      color: $colotTextGray;
+      margin-left: -21px;
+    }
+  }
+}

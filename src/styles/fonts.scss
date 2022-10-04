@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Stolzl";
+  src: url("../font/Stolzl-Light.eot");
+  src: local("Stolzl Light"),
+    url("../font/Stolzl-Light.eot?#iefix") format("embedded-opentype"),
+    url("../font/Stolzl-Light.woff2") format("woff2"),
+    url("../font/Stolzl-Light.woff") format("woff"),
+    url("../font/Stolzl-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("../font/Stolzl-Regular.eot");
+  src: local("Stolzl Regular"),
+    url("../font/Stolzl-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../font/Stolzl-Regular.woff2") format("woff2"),
+    url("../font/Stolzl-Regular.woff") format("woff"),
+    url("../font/Stolzl-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

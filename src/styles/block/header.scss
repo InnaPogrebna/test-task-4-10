@@ -1,0 +1,236 @@
+.header {
+  &__top {
+    height: 44px;
+    width: 100%;
+    background-color: $colorBgPreHeader;
+    transform: translateY(-100%);
+    animation: translateBanner 0.3s ease forwards;
+    animation-delay: 0.3s;
+
+    &-content {
+      margin-top: 2px;
+    }
+
+    &-img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &-title {
+      padding-left: 10.22px;
+      margin-bottom: 0;
+      @extend %Stolzl-Regular;
+      font-size: 16px;
+      line-height: 24px;
+      color: $colorTextPreHeader;
+
+      @media (max-width: 992px) {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__main {
+    margin-top: 18px;
+    border-bottom: 1px solid $colorBorder;
+    padding-bottom: 23px;
+
+    &-logo {
+      padding-left: 0;
+      height: 21px;
+      transform: translateX(-40%);
+      opacity: 0;
+      animation: moveLogo 0.3s ease forwards;
+      animation-delay: 0.5s;
+
+      @media (max-width: 1400px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 4px;
+    transform: scale(0);
+    animation: scale 0.3s ease forwards;
+    animation-delay: 0.7s;
+
+    @media (max-width: 1400px) {
+      margin-top: 15px;
+    }
+
+    &-input {
+      margin-right: 25px;
+      padding-left: 50px;
+
+      &::placeholder {
+        @extend %Stolzl-Regular;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: -3px;
+
+        @media (max-width: 992px) {
+          opacity: 0;
+        }
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 12px;
+      left: 30px;
+      width: 16.4px;
+      height: 16.4px;
+
+      @media (max-width: 992px) {
+        opacity: 0;
+      }
+    }
+    &-btn {
+      width: 160px;
+      @extend %Stolzl-Regular;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 8px 16px;
+      margin-right: 11px;
+
+      @media (max-width: 992px) {
+        font-size: 10px;
+        padding: 0;
+      }
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    @extend %Stolzl-Regular;
+    font-size: 12px;
+    margin-right: 5px;
+
+    &::after {
+      content: url("../images/arrow-down.svg");
+      position: absolute;
+      width: 10.45px;
+      height: 6px;
+      right: -4.78px;
+    }
+  }
+
+  &__icons {
+    padding-left: 0;
+    margin-top: 5px;
+    height: 100%;
+
+    @media (max-width: 992px) {
+      margin-top: 14px;
+    }
+
+    &-content {
+      position: relative;
+      margin-left: 23.5px;
+      transform: scale(0);
+      animation: scale 0.3s ease forwards;
+      cursor: pointer;
+    }
+
+    &-text {
+      position: absolute;
+      top: -3px;
+      right: -8px;
+      width: 14px;
+      height: 14px;
+      @extend %Stolzl-Regular;
+      border: 1px solid $colorWhite;
+      border-radius: 50%;
+      font-size: 10px;
+      text-align: center;
+      color: $colotTextGray;
+    }
+
+    &-hover:hover svg path {
+      fill: $colorRed;
+    }
+
+    &-like-text,
+    &-cart-text {
+      background-color: $colorGray;
+    }
+
+    &-message-text {
+      background-color: $colorRed;
+      color: $colorWhite;
+    }
+
+    &-avatar {
+      margin-left: 14px;
+      position: relative;
+      &::after {
+        content: url("../images/arrow-down.svg");
+        position: absolute;
+        width: 10.45px;
+        height: 6px;
+        right: -17px;
+        top: 3px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-top: 17px;
+    justify-content: space-between;
+
+    &-list {
+      margin-right: -14px;
+      flex-wrap: wrap;
+
+      @media (max-width: 1400px) {
+        margin-right: 0;
+        justify-content: center;
+      }
+    }
+
+    &-item {
+      @extend %Stolzl-Regular;
+      font-weight: 600;
+      font-size: 13px;
+      color: $colotTextGray;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding-bottom: 15px;
+      margin-left: 5px;
+      transform: scale(0);
+      animation: scale 0.2s ease forwards;
+
+      @media (max-width: 992px) {
+        font-size: 10px;
+      }
+
+      &:hover {
+        box-shadow: inset 0 -3px 0 #2d3132;
+      }
+    }
+  }
+
+  &__border {
+    height: 1px;
+    background-color: $colorBorder;
+  }
+}
+
+.active {
+  box-shadow: inset 0 -3px 0 #2d3132;
+}
+
+@for $i from 1 through 4 {
+  .header__icons-content:nth-child(4n + #{$i}) {
+    animation-delay: 0.7s + $i/7;
+  }
+}
+
+@for $i from 1 through 10 {
+  .header__nav-item:nth-child(10n + #{$i}) {
+    animation-delay: 1.1s + $i/8;
+  }
+}

@@ -1,0 +1,127 @@
+.card {
+  @extend %Stolzl-Regular;
+  width: 312px;
+  margin-left: 10px;
+  margin-right: 8px;
+  margin-top: 22px;
+  transform: translateY(500%);
+  animation: moveRight 0.3s ease forwards;
+  animation-delay: 2.3s;
+
+  &__like {
+    width: 21px;
+    height: 18px;
+    position: absolute;
+    right: 23px;
+    top: 26.44px;
+    background-image: url("../images/header-likes.svg");
+    background-repeat: no-repeat;
+  }
+
+  &-img-top {
+    width: 207px;
+    padding-top: 45px;
+    margin: auto;
+  }
+
+  &-rating {
+    margin-top: -18px;
+    margin-bottom: 10px;
+    margin-left: -5px;
+    @extend %Stolzl-Regular;
+    background-color: $colorGreen;
+    border-radius: 4px;
+    font-size: 10px;
+    color: $colorCardTop;
+    width: 38px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(.true) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &-material {
+    @extend %Stolzl-Regular;
+    font-size: 10px;
+    color: $colotTextGray;
+    background-color: $colorBorder;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 56px;
+    position: absolute;
+    top: 23px;
+    left: 25px;
+  }
+
+  &-brand {
+    color: $colorGrayMedium;
+    font-size: 10px;
+    margin-left: -5px;
+  }
+
+  &-title {
+    color: $colotTextGray;
+    font-size: 14px;
+    margin-left: -5px;
+    margin-top: 3px;
+  }
+
+  &-descriprion {
+    padding-bottom: 9px;
+  }
+
+  &-sale {
+    margin-top: 20px;
+    margin-left: -5px;
+    &-old {
+      color: $colorLightGray;
+      font-size: 12px;
+    }
+
+    &-new {
+      font-weight: 500;
+      color: $colotTextGray;
+      font-size: 14px;
+    }
+  }
+
+  &-seller {
+    margin-top: 18px;
+    position: relative;
+    left: 4px;
+    &-city {
+      position: relative;
+      font-size: 12px;
+      color: $colotTextGray;
+
+      &::before {
+        content: url("../images/location.svg");
+        width: 8.4px;
+        height: 10.8px;
+        margin-right: 2px;
+        top: 1px;
+      }
+    }
+    &-name {
+      position: relative;
+      font-size: 14px;
+      margin-top: 3px;
+
+      &-wrapper {
+        margin-left: 13px;
+      }
+
+      &__ava {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.pagination {
+  margin-top: 56px;
+  @extend %Stolzl-Regular;
+
+  @media (max-width: 1400px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 9px;
+    @extend %Stolzl-Regular;
+    cursor: pointer;
+
+    &:first-child .page-link {
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+
+    &:last-child .page-link {
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+    }
+
+    &.active {
+      background-color: transparent;
+      font-weight: 500;
+      font-size: 10px;
+      color: $colotTextGray;
+      height: 40px;
+      width: 40px;
+      border: 1px solid transparent;
+      box-shadow: none;
+    }
+
+    &.active .page-link {
+      font-size: 10px;
+      color: $colotTextGray;
+      background-color: transparent;
+      height: 40px;
+      width: 40px;
+      border: 1.6px solid $colotTextGray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 18px;
+      color: $colorGrayMedium;
+      border: 1.6px solid $colorRangeLight;
+      border-radius: 100px;
+      height: 34px;
+      width: 34px;
+
+      &:focus,
+      &:active {
+        box-shadow: none;
+        border: 1px solid transparent;
+        border-color: transparent;
+        color: $colotTextGray;
+      }
+
+      &:hover {
+        color: $colotTextGray;
+      }
+    }
+
+    &-switch {
+      font-weight: 400;
+      font-size: 12px;
+      color: $colorGrayMedium;
+      border: 1.6px solid $colorRangeLight;
+      border-radius: 100px;
+      padding: 5px 12px;
+
+      &:focus,
+      &:active {
+        box-shadow: none;
+        border-color: transparent;
+        color: $colotTextGray;
+      }
+
+      &:hover {
+        color: $colotTextGray;
+      }
+    }
+  }
+}
+
+.active {
+  font-size: 10px;
+  color: $colotTextGray;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border: 1.6px solid $colotTextGray;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disableEl {
+  pointer-events: none;
+  cursor: no-drop;
+}

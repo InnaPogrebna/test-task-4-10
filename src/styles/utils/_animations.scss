@@ -1,0 +1,61 @@
+@keyframes translateBanner {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes moveLogo {
+  from {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+    clip-path: polygon(100% 0, 102% 100%, 0 100%, 0 0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(500%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveTop {
+  from {
+    transform: translateY(-600%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

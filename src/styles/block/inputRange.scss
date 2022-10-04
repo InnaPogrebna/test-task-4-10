@@ -1,0 +1,63 @@
+.range__slider {
+  position: relative;
+  margin-top: 8px;
+  margin-left: 3px;
+  width: 100%;
+  height: 4px;
+  background-color: $colorRangeLight;
+
+  & .progress {
+    position: absolute;
+    left: 0%;
+    right: 50%;
+    height: 100%;
+    background-color: $colorGrayMedium;
+  }
+
+  & input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    pointer-events: none;
+    background: none;
+    outline: none;
+  }
+
+  & .range-min::-webkit-slider-thumb,
+  & .range-max::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: $colorGrayMedium;
+    border-radius: 4px;
+    opacity: 1;
+    position: relative;
+    top: -3px;
+  }
+
+  &-values {
+    margin-top: 32px;
+    margin-left: 3px;
+  }
+
+  &-numberVal {
+    width: 120px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid $colorRangeLight;
+
+    & input {
+      @extend %Stolzl-Regular;
+      font-size: 12px;
+      color: $colotTextGray;
+      margin-top: 6px;
+    }
+
+    &-text {
+      @extend %Stolzl-Regular;
+      font-size: 10px;
+      color: $colorLightGray;
+    }
+  }
+}

@@ -1,45 +1,1124 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/styles/style.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/styles/style.scss">
+    <title>Monvalise</title>
   </head>
   <body>
-    <div class="page">
-      <header class="header-wrapper">
-        <div class="header">
-          <div class="container">
-            <span class="header-pseudo">
-              <span class ="header-title">
-                top antivirus
-              </span>
-            </span>
-            <span class="header-text">pc app store™</span>
+    <header class="header">
+      <div class="header__top">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center header__top-content">
+              <img src="./images/like.png" alt="like">
+              <img
+                class="header__top-img"
+                src="./images/dress.svg"
+                alt="dress"
+              >
+              <p class="header__top-title">Брендовий верхній одяг від 899 грн</p>
+            </div>
           </div>
-    
         </div>
-      </header>
-      <main>
-        <div class="container">
-          <h1 class="title">thank you for choosing our product !</h1>
-          <ul class="cards"></ul>
+      </div>
+      <div class="header__main container">
+        <div class="row d-flex align-items-center ">
+          <div class="col-xxl-2 col-lg-12 header__main-logo">
+            <a href="#">
+              <img src="./images/logo.png" alt="logo">
+            </a>
+          </div>
+          <div class="col-xxl-8 col-lg-12 d-flex justify-content-center align-items-center header__form">
+            <img 
+              src="./images/search.svg"
+              class="header__form-icon"
+              alt="logo"
+            />
+            <input
+              type="text"
+              class="form-control header__form-input"
+              placeholder="Знайти речі або бренди"
+            />
+            <button
+              type="submit"
+              class="btn btn-dark header__form-btn"
+            >
+              Додати товар
+            </button>
+            <div class="header__language">
+              <button 
+                class="header__dropdown btn"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Укр
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Укр
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Англ
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xxl-2 col-lg-12  header__icons d-flex">
+            <div class="header__icons-content d-flex">
+              <div class="header__icons-like-img header__icons-hover">
+                <svg
+                  width="21"
+                  height="19"
+                  viewBox="0 0 21 19"
+                  fill="#2D3132"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.2426 1.75736C12.5858 -0.585787 16.3848 -0.585787 18.7279 1.75736C21.0711 4.10051 21.0711 7.89949 18.7279 10.2426L10.2426 18.728L1.75736 10.2427C-0.585787 7.89953 -0.585786 4.10054 1.75736 1.75739C4.1005 -0.585744 7.89947 -0.58576 10.2426 1.75736ZM17.3137 3.17158C15.7516 1.60948 13.2189 1.60947 11.6568 3.17157L10.2426 4.58579L8.82843 3.17161C7.26633 1.60951 4.73367 1.60951 3.17157 3.17161C1.60948 4.7337 1.60948 7.26636 3.17157 8.82846L10.2426 15.8995L17.3137 8.82843C18.8758 7.26633 18.8758 4.73367 17.3137 3.17158Z"
+                    fill="#2D3132" />
+                </svg>
+              </div>
+              <div class="header__icons-like-text header__icons-text">8</div>
+            </div>
+            <div class="header__icons-content d-flex">
+              <div class="header__icons-message-img header__icons-hover">
+                <svg
+                  width="20"
+                  height="19"
+                  viewBox="0 0 20 19"
+                  fill="#2D3132"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 6C15 6.55228 14.5523 7 14 7H6C5.44772 7 5 6.55228 5 6C5 5.44772 5.44772 5 6 5H14C14.5523 5 15 5.44772 15 6Z"
+                    fill="#2D3132" />
+                  <path
+                    d="M5 10C5 10.5523 5.44772 11 6 11H14C14.5523 11 15 10.5523 15 10C15 9.44772 14.5523 9 14 9H6C5.44772 9 5 9.44772 5 10Z"
+                    fill="#2D3132" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4 0C1.79086 0 0 1.79086 0 4V16C0 17.8811 1.93624 19.1395 3.65525 18.3754L8.2243 16.3448C8.73574 16.1174 9.28918 16 9.84886 16H16C18.2091 16 20 14.2091 20 12V4C20 1.79086 18.2091 0 16 0H4ZM16 2H4C2.89543 2 2 2.89543 2 4V16C2 16.4338 2.44653 16.724 2.84297 16.5478L7.41203 14.5171C8.17918 14.1762 9.00935 14 9.84886 14H16C17.1046 14 18 13.1046 18 12V4C18 2.89543 17.1046 2 16 2Z"
+                    fill="#2D3132" />
+                </svg>
+              </div>
+              <div class="header__icons-message-text header__icons-text">3</div>
+            </div>
+            <div class="header__icons-content d-flex">
+              <div class="header__icons-cart-img header__icons-hover">
+                <svg
+                  width="20"
+                  height="19"
+                  viewBox="0 0 20 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.79797 2H0V0H4.44013L5.07398 3.19462C5.16705 3.6625 5.57777 4 6.05486 4H16.114C18.2086 4 19.6585 6.09212 18.923 8.05337L17.423 12.0534C16.9839 13.2243 15.8645 14 14.614 14H9.28432C6.89805 14 4.84434 12.3137 4.37993 9.97309L2.79797 2ZM5.62449 5.96918L6.34169 9.58386C6.62034 10.9882 7.85256 12 9.28432 12H14.614C15.0308 12 15.404 11.7414 15.5503 11.3511L17.0503 7.35112C17.2955 6.69737 16.8122 6 16.114 6H6.05486C5.90907 6 5.76535 5.98951 5.62449 5.96918Z"
+                    fill="#2D3132" />
+                  <path
+                    d="M8 17.5C8 18.3284 7.32843 19 6.5 19C5.67157 19 5 18.3284 5 17.5C5 16.6716 5.67157 16 6.5 16C7.32843 16 8 16.6716 8 17.5Z"
+                    fill="#2D3132" />
+                  <path
+                    d="M15.5 19C16.3284 19 17 18.3284 17 17.5C17 16.6716 16.3284 16 15.5 16C14.6716 16 14 16.6716 14 17.5C14 18.3284 14.6716 19 15.5 19Z"
+                    fill="#2D3132" />
+                </svg>
+              </div>
+              <div class="header__icons-cart-text header__icons-text">3</div>
+            </div>
+            <div class="header__icons-content">
+              <div class="header__icons-avatar">
+                <img src="./images/avatar.svg" alt="ava" />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer class="footer">
-        <div class="footer-wrapper">
-          <span class="header-title">top antivirus</span>
-          <span class="footer-text">Copyright © 2021 </span>
+      </div>
+      <div class="header__nav container">
+        <div class="row">
+          <nav class="col-xxl-9 col-md-12">
+            <ul class="header__nav-list  d-flex justify-content-between align-items-center">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Головна
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Каталог
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Жінкам
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Чоловікам
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Дитячі речі
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Аукціон
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Бренди
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Акції
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Аутентифікація
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">
+                  Блог
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </footer>
-    </div>
-    <script type="text/javascript" src="../src/scripts/script.js"></script>
+      </div>
+      <div class="row">
+        <div class="col-12 header__border">
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="row">
+          <div class="catalog">
+            <div class="col-xxl-2 col-lg-6 catalog__chapter d-flex">
+              <p class="catalog__chapter-title">Головна</p>
+              <span class="catalog__chapter-chapter">Каталог одягу</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-3 col-md-6 catalog__title">
+            <h3 class="catalog__title-text">Каталог одягу</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-12 col-md-10 catalog__filters d-flex justify-content-between">
+            <h3 class="catalog__filters-title">Фільтри</h3>
+            <div class="catalog__filters-sort d-flex justify-content-center align-items-center">
+              <span class="catalog__filters-sortBy">Сoртувати за:</span>
+              <div class="dropdown catalog__filters-wrapper">
+                <button
+                  class="btn catalog__filters-sort-btn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  За замовчуванням
+                </button>
+                <button
+                  class="btn catalog__filters-sort-icon"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="./images/arrow-down.svg" alt="arrow" />
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item catalog__filters-sort" href="#">
+                      За датою
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item catalog__filters-sort" href="#">
+                      За популярністю
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item catalog__filters-sort" href="#">
+                      За рейтингом
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row catalog__content">
+          <div class=" col-xxl-3 col-xl-4 col-md-6 col-sm-12 catalog__accordion">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Категорії
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                  >
+                  <div class="accordion-body">
+                    This is the first item's accordion body.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Ціна
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="range__slider">
+                      <div class="progress"></div>
+                      <span class="range-min-wrapper">
+                        <input
+                          class="range-min"
+                          type="range"
+                          min="980"
+                          max="40000"
+                          value="980"
+                        >
+                      </span>
+                      <span class="range-max-wrapper">
+                        <input
+                          class="range-max"
+                          type="range"
+                          min="980"
+                          max="40100"
+                          value="20465"
+                        >
+                      </span>
+                    </div>
+                    <div class="range__slider-values d-flex justify-content-between">
+                      <div class="range-min range__slider-numberVal d-flex flex-column">
+                        <span class="range__slider-numberVal-text">Від</span>
+                        <input
+                          type="number"
+                          min="980"
+                          max="40000"
+                          value="980"
+                          disabled
+                        >
+                      </div>
+                      <div class="range-max range__slider-numberVal d-flex flex-column">
+                        <span class="range__slider-numberVal-text">До</span>
+                        <input
+                          type="number"
+                          min="980"
+                          max="40100"
+                          value="20465"
+                          disabled
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Продавець
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                    vero corrupti minima, iusto sapiente molestias aperiam ad? Amet asperiores et atque doloribus,
+                    molestias illum vitae possimus. Consequuntur!
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Бренд
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    Стать
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="catalog__sex d-flex justify-content-between align-items-center">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexCheckDefault" 
+                          checked
+                        />
+                        <label
+                          class="form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          Жінкам
+                        </label>
+                      </div>
+                      <div class="catalog__sex-amount">(64)</div>
+                    </div>
+                    <div class="catalog__sex d-flex justify-content-between">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox" 
+                          id="flexCheckDefault"
+                          checked
+                        />
+                        <label
+                          class="form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          Чоловікам
+                        </label>
+                      </div>
+                      <div class="catalog__sex-amount">(16)</div>
+                    </div>
+                    <div class="catalog__sex d-flex justify-content-between">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexCheckDefault"
+                          />
+                        <label
+                          class="form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          Унісекс
+                        </label>
+                      </div>
+                      <div class="catalog__sex-amount">(24)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    Розмір
+                  </button>
+                </h2>
+                <div
+                  id="collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSix"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="collapseSeven"
+                  >
+                    Колір
+                  </button>
+                </h2>
+                <div
+                  id="collapseSeven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSeven"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight"
+                    aria-expanded="false"
+                    aria-controls="collapseEight"
+                  >
+                    Матеріал
+                  </button>
+                </h2>
+                <div
+                  id="collapseEight"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingEight"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine"
+                    aria-expanded="false"
+                    aria-controls="collapseNine"
+                  >
+                    Сезон
+                  </button>
+                </h2>
+                <div
+                  id="collapseNine"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingNine"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTen"
+                    aria-expanded="false"
+                    aria-controls="collapseTen"
+                  >
+                    Стиль
+                  </button>
+                </h2>
+                <div
+                  id="collapseTen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat impedit magnam
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-9 col-xl-8 col-md-6 col-sm-12">
+            <div class="row d-flex catalog__cards">
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="like"
+                />
+                <img
+                  src="./images/clothe-1.jpg"
+                  class="card-img-top"
+                  alt="1"
+                />
+                <div class="card-body">
+                  <div class="card-rating true">
+                    ТОП
+                  </div>
+                  <span class="card-brand">LOUIS VUITTON</span>
+                  <h5 class="card-title">Темно-сині джинси Louis Vuitton</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>5 499</del></span>
+                      <span class="card-sale-new">3 799</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Херсон</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-brand.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">LoveBrand</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="like"
+                />
+                <img
+                  src="./images/clothe-2.jpg"
+                  class="card-img-top"
+                  alt="2"
+                />
+                <div class="card-body">
+                  <div class="card-rating true">
+                    ТОП
+                  </div>
+                  <span class="card-brand">THOM BROWNE</span>
+                  <h5 class="card-title">Чорний піджак Thom Browne</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>11 999</del></span>
+                      <span class="card-sale-new">8 599</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Хмельницький</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava_sell.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">
+                          Sell_For_Men
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="like"
+                />
+                <img
+                  src="./images/clothe-3.jpg"
+                  class="card-img-top"
+                  alt="3"
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">CANALI</span>
+                  <h5 class="card-title">Вовняний піджак Canali</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>4 999</del></span>
+                      <span class="card-sale-new">2 599 </span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Хмельницький</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava_sell.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">
+                          Sell_For_Men
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="like"
+                />
+                <img
+                  src="./images/clothe-4.jpg"
+                  class="card-img-top"
+                  alt="4"
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">LOUIS VUITTON</span>
+                  <h5 class="card-title">Клатч Louis Vuitton Limelight</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>4 999</del></span>
+                      <span class="card-sale-new">3 499</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Дніпро</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-brandear.png"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">Brandear</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <div class="card-material">
+                  organic
+                </div>
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="like"
+                />
+                <img
+                  src="./images/clothe-5.jpg"
+                  class="card-img-top"
+                  alt="5"
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">ELENA GHISELINI</span>
+                  <h5 class="card-title">Сумка з декором Elena Ghisellini</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>1 999</del></span>
+                      <span class="card-sale-new">1 599</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Дніпро</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-brandear.png"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">Brandear</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="like"
+                />
+                <img
+                  src="./images/clothe-6.jpg"
+                  class="card-img-top"
+                  alt="6"
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">ACNE</span>
+                  <h5 class="card-title">Бомбер Acne на блискавці</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>5 999</del></span>
+                      <span class="card-sale-new">4 199</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Київ</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-alex.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">Alexalex</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="likes"
+                />
+                <img
+                  src="./images/clothe-7.jpg"
+                  class="card-img-top"
+                  alt="7"
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">GUCCI</span>
+                  <h5 class="card-title">Довга сукня Gucci</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>11 999</del></span>
+                      <span class="card-sale-new">8 599</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Рівне</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-selBuy.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">SellBuy</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="likes"
+                />
+                <img
+                  src="./images/clothe-8.jpg"
+                  class="card-img-top"
+                  alt="8" 
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">CHANEL</span>
+                  <h5 class="card-title">Помаранчевий бомбер Woolrich</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>1 999</del></span>
+                      <span class="card-sale-new">1 599</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Кропивницький</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-sofia.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">Deeva_Sofia</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-3">
+                <img
+                  src="./images/header-likes.svg"
+                  class="card__like"
+                  alt="likes"
+                />
+                <img
+                  src="./images/clothe-9.jpg"
+                  class="card-img-top"
+                  alt="9" 
+                />
+                <div class="card-body">
+                  <div class="card-rating">
+                    ТОП
+                  </div>
+                  <span class="card-brand">HACHE</span>
+                  <h5 class="card-title">Салатове пальто Hache</h5>
+                  <div class="card-descriprion d-flex justify-content-between">
+                    <div class="card-sale d-flex flex-column">
+                      <span class="card-sale-old"><del>5 999</del></span>
+                      <span class="card-sale-new">4 199</span>
+                    </div>
+                    <div class="card-seller d-flex flex-column">
+                      <span class="card-seller-city text-end">Київ</span>
+                      <div class="card-seller-name-wrapper d-flex align-items-center ">
+                        <img
+                          class="card-seller-name__ava"
+                          src="./images/ava-brand.jpg"
+                          alt="sell"
+                        />
+                        <span class="card-seller-name text-end">LoveBrand</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row catalog__pagination d-flex justify-content-center">
+            <div class="col-xxl-9 col-md-12">
+              <nav
+                aria-label="pagination-nav"
+                class="catalog__pagination-nav d-flex justify-content-end"
+              >
+                <ul class="pagination d-flex align-items-center">
+                  <li id="prev" class="page-item pagination__item">
+                    <a class="page-link pagination__item-switch">
+                      Попередня
+                    </a>
+                  </li>
+                  <li id="numbers" class="page-item pagination__item">
+                    <a class="page-link pagination__item-link">1</a>
+                  </li>
+                  <li id="numbers" class="page-item pagination__item active">
+                    <a class="page-link pagination__item-link">2</a>
+                  </li>
+                  <li
+                    id="numbers"
+                    class="page-item pagination__item"
+                  >
+                    <a class="page-link pagination__item-link">3</a>
+                  </li>
+                  <li
+                    id="numbers"
+                    class="page-item pagination__item"
+                    aria-current="page"
+                  >
+                    <a class="page-link pagination__item-link">4</a>
+                  </li>
+                  <li
+                    id="numbers"
+                    class="page-item pagination__item"
+                    aria-current="page"
+                  >
+                    <a class="page-link pagination__item-link">5</a>
+                  </li>
+                  <li
+                    id="numbers"
+                    class="page-item pagination__item"
+                    aria-current="page"
+                  >
+                    <a class="page-link pagination__item-link">6</a>
+                  </li>
+                  <li
+                    id="numbers"
+                    class="page-item pagination__item"
+                    aria-current="page"
+                  >
+                    <a class="page-link pagination__item-link">7</a>
+                  </li>
+                  <li
+                    id="numbers"
+                    class="page-item pagination__item"
+                    aria-current="page"
+                  >
+                    <a class="page-link pagination__item-link">8</a>
+                  </li>
+                  <li id="next" class="page-item pagination__item">
+                    <a class="page-link pagination__item-switch">
+                      Наступна
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="row">
+        <div class="col-12 footer__wrapper">
+          <div class="container footer__container d-flex justify-content-between">
+            <div class="col-xxl-3 col-md-5">
+              <ul class="footer__list d-flex flex-column">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Довідка для покупців</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Отримати підтримку</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Як купувати</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Як залишити корисний відгук</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Програма Захисту Покупців</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Рекомендації з безпечних покупок</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xxl-3 col-md-5">
+              <ul class="footer__list d-flex flex-column">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Довідка для продавців</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Як почати продавати</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Тарифи</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Угода користувача</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Політика конфіденційності</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Правила користування порталом</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Бонусна програма</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xxl-3 col-md-5">
+              <ul class="footer__list d-flex flex-column">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Про нас</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Довідка та FAQ</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Захист легальності контенту</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Адміністрація</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">Вакансії</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xxl-3 col-md-5">
+              <ul class="footer__list d-flex flex-column">
+                <li class="footer__list-item">
+                  <a
+                    href="https://play.google.com/store/games?hl=ru&gl=US"
+                    target="_blank"
+                    class="footer__list-link"
+                  >
+                    Мобільний додаток
+                  </a>
+                </li>
+                <li class="footer__list-item footer__list-img">
+                  <a
+                    href="https://play.google.com/store/games?hl=ru&gl=US"
+                    target="_blank"
+                    class="footer__list-link"
+                  >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row footer__copyright">
+        <div class="col-12">
+          <div class="container">
+            <p class="footer__copyright-text text-start">© 2022 Monvalise</p>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
   </body>
+
 </html>

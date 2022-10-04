@@ -1,122 +1,81 @@
 'use strict';
 
-// eslint-disable-next-line no-undef
-const dataUrl = fetch('https://myjson.dit.upm.es/api/bins/ckb3');
+// input range
+const range = document.querySelectorAll('.range__slider span input');
+const progress = document.querySelector('.range__slider .progress');
+const gap = 0.1;
+const inputValue = document.querySelectorAll('.range__slider-numberVal input');
 
-dataUrl
-  .then(response => response.json())
-  .then((data) => {
-    const arr = data.result.elements;
+range.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    const minRange = parseInt(range[0].value);
+    const maxRange = parseInt(range[1].value);
 
-    arr.map((item) => createCard(item));
+    if (maxRange - minRange < gap) {
+      if (e.target.className === 'range-min') {
+        range[0].value = maxRange - gap;
+      } else {
+        range[1].value = minRange + gap;
+      }
+    } else {
+      progress.style.left = (minRange / range[0].max) * 100 + '%';
+      progress.style.right = 100 - (maxRange / range[1].max) * 100 + '%';
+      inputValue[0].value = minRange;
+      inputValue[1].value = maxRange;
+    }
   });
+});
 
-const list = document.querySelector('.cards');
-const page = document.querySelector('.page');
+// pagination
+const prevBtn = document.querySelector('#prev');
+const nextBtn = document.querySelector('#next');
+const listNumbers = [...document.querySelectorAll('#numbers')];
 
-function createCard(data) {
-  const li = document.createElement('li');
+const current = document.getElementsByClassName('active');
+let isActive = listNumbers.indexOf(current[0]);
 
-  li.insertAdjacentHTML('beforeend', `
-      <div class="card">
-        <div class="price-wrapper">
-          <div class="price">
-            <p class="amount">$${data.amount}</p>
-            <span class="amount-index">/${genIndexAmount(data)}</span>
-          </div>
-          ${amountHTML(data)}
-        </div>
-        <div class="name-prod-wrapper">
-          <span class="name-prod">${data.name_prod}</span>
-          <span class="license-name">${data.license_name}</span>
-          <button class="btn-download"
-          >
-            <a class="btn-download-link" 
-              href=${data.link}
-            >
-          Download
-          </a>
-        </button>
-        </div>
-        ${getSale(data)}
-        ${getMinAmount(data)}
-      </div>
-    `);
-  list.appendChild(li);
+prevBtn.addEventListener('click', getPrev);
+nextBtn.addEventListener('click', getNext);
 
-  [...document.querySelectorAll('.btn-download')].forEach(btn => {
-    btn.addEventListener('click', () => {
-      download();
-    });
+function getNext(event) {
+  event.preventDefault();
+  prevBtn.classList.remove('disabled', 'disableEl');
+
+  listNumbers[isActive].className = current[0].className.replace('active', '');
+  listNumbers[isActive + 1].classList.add('active');
+  isActive++;
+
+  if (isActive === listNumbers.length - 1) {
+    nextBtn.classList.add('disabled', 'disableEl');
+  }
+}
+
+function getPrev(event) {
+  event.preventDefault();
+
+  listNumbers[isActive].className = current[0].className.replace('active', '');
+  listNumbers[isActive - 1].classList.add('active');
+  isActive--;
+
+  if (isActive < 1) {
+    prevBtn.classList.add('disabled', 'disableEl');
+  }
+  removeDisabledNextBtn();
+}
+
+listNumbers.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+    current[0].className = current[0].className.replace('active', '');
+    event.currentTarget.classList.add('active');
+    isActive = listNumbers.indexOf(event.currentTarget);
+    prevBtn.classList.remove('disabled', 'disableEl');
+    removeDisabledNextBtn();
   });
-}
+});
 
-function genIndexAmount(data) {
-  if (data.amount_html) {
-    return 'mo';
-  }
-
-  return 'per year';
-};
-
-function amountHTML(data) {
-  if (data.amount_html) {
-    return `<span class="amount-sale">${data.amount_html.split(' ')[0]}</span>`;
-  } else {
-    return ``;
-  }
-};
-
-function getSale(data) {
-  if (data.amount_html) {
-    return `<div class="sale"></div>`;
-  } else {
-    return ``;
+function removeDisabledNextBtn() {
+  if (isActive < listNumbers.length - 1) {
+    nextBtn.classList.remove('disabled', 'disableEl');
   }
 }
-
-function getMinAmount(data) {
-  if (data.is_best) {
-    return `
-        <div class="best-value">
-          <span class="best-value-text">best value</span>
-        </div>
-      `;
-  } else {
-    return ``;
-  }
-}
-
-function download() {
-  const arrow = document.createElement('div');
-
-  if (navigator.userAgent.indexOf('Firefox') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-          <div class="arrowFirefox">
-          </div>
-        `);
-  } else if (navigator.userAgent.indexOf('Chrome') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-        <div class="arrowChrome">
-        </div>
-      `);
-  }
-
-  if (navigator.userAgent.indexOf('Firefox') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-        <div class="arrowFirefox">
-        </div>
-      `);
-  } else if (navigator.userAgent.indexOf('Chrome') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-      <div class="arrowChrome">
-      </div>
-    `);
-  }
-
-  page.append(arrow);
-
-  setTimeout(() => {
-    arrow.style.visibility = 'hidden';
-  }, 4000);
-};
