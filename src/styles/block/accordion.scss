@@ -1,9 +1,9 @@
 .accordion {
   width: 312px;
   margin-top: -2px;
-  transform: translateY(-600%);
+  transform: translateX(-400%);
   opacity: 0;
-  animation: moveTop 0.3s ease forwards;
+  animation: moveLeft 0.3s ease forwards;
   animation-delay: 2.4s;
 
   &-button {

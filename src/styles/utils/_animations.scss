@@ -49,9 +49,9 @@
   }
 }
 
-@keyframes moveTop {
+@keyframes moveLeft {
   from {
-    transform: translateY(-600%);
+    transform: translateX(-400%);
     opacity: 0;
   }
   to {
