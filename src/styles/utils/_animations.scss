@@ -40,7 +40,7 @@
 
 @keyframes moveRight {
   from {
-    transform: translateX(500%);
+    transform: translateX(100%);
     opacity: 0;
   }
   to {
@@ -51,7 +51,7 @@
 
 @keyframes moveLeft {
   from {
-    transform: translateX(-400%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
