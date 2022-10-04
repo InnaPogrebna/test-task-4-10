@@ -64,11 +64,19 @@
     }
 
     &-sort {
-      margin-right: 6px;
       transform: translateX(200%);
       opacity: 0;
       animation: moveRight 0.3s ease forwards;
       animation-delay: 2.1s;
+      position: relative;
+      z-index: 30;
+      margin-top: -2px;
+    }
+
+    &-sort-link {
+      color: $colorGrayMedium;
+      @extend %Stolzl-Regular;
+      font-size: 12px;
     }
 
     &-sort,
@@ -93,7 +101,7 @@
 
     &-sort-icon {
       height: 32px;
-      // margin-left: -px;
+      margin-right: 7px;
       padding: 8px;
       background-color: $colorGray;
       border-top-right-radius: 100px;
@@ -128,17 +136,21 @@
       @extend %Stolzl-Regular;
       font-size: 14px;
       color: $colorLightGray;
-      margin-top: -14px;
+      margin-top: -16px;
     }
   }
 
   &__cards {
+    gap: 25px;
+    margin-top: 22px;
+    position: relative;
+    left: 6px;
     @media (max-width: 768px) {
       justify-content: center;
     }
   }
 
   &__pagination {
-    margin-left: -24px;
+    margin-left: -25px;
   }
 }

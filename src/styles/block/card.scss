@@ -1,12 +1,19 @@
 .card {
   @extend %Stolzl-Regular;
   width: 312px;
-  margin-left: 10px;
-  margin-right: 8px;
-  margin-top: 22px;
+  // margin-right: 20px;
+  // margin-top: 2px;
   transform: translateY(500%);
   animation: moveRight 0.3s ease forwards;
   animation-delay: 2.3s;
+  // position: relative;
+  // left: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(2px);
+  }
 
   &__like {
     width: 21px;
@@ -16,6 +23,13 @@
     top: 26.44px;
     background-image: url("../images/header-likes.svg");
     background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      animation: triggerHeart 0.3s ease;
+      animation-iteration-count: infinite;
+    }
   }
 
   &-img-top {
@@ -61,18 +75,18 @@
   &-brand {
     color: $colorGrayMedium;
     font-size: 10px;
-    margin-left: -5px;
+    margin-left: -4px;
   }
 
   &-title {
     color: $colotTextGray;
     font-size: 14px;
     margin-left: -5px;
-    margin-top: 3px;
+    margin-top: 2px;
   }
 
   &-descriprion {
-    padding-bottom: 9px;
+    padding-bottom: 7px;
   }
 
   &-sale {
@@ -121,6 +135,7 @@
         height: 20px;
         position: absolute;
         left: -15px;
+        top: 23px;
       }
     }
   }

@@ -43,6 +43,7 @@
     "projectType": "layout"
   },
   "dependencies": {
+    "bootstrap": "^5.2.2",
     "fetch": "^1.1.0",
     "images": "^3.2.4",
     "no": "0.0.1",
