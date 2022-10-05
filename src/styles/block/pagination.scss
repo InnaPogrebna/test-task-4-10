@@ -87,6 +87,15 @@
         color: $colotTextGray;
       }
     }
+
+    &--disabled {
+      pointer-events: none;
+      cursor: no-drop;
+    }
+  }
+
+  &-nav {
+    justify-content: flex-end;
   }
 }
 
@@ -101,9 +110,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.disableEl {
-  pointer-events: none;
-  cursor: no-drop;
 }

@@ -8,6 +8,10 @@
   animation: textAnimation 0.3s ease forwards;
   animation-delay: 1.6s;
 
+  @media (max-width: 992px) {
+    margin-left: 0;
+  }
+
   &__chapter {
     font-size: 12px;
     font-weight: 500;
@@ -41,12 +45,20 @@
     &-text {
       @extend %Stolzl-Regular;
       font-size: 28px;
+
+      @media (max-width: 992px) {
+        padding: 0 9px;
+      }
     }
   }
 
   &__filters {
     padding: 0;
     margin-top: 29px;
+
+    @media (max-width: 992px) {
+      padding: 0 9px;
+    }
 
     &-wrapper {
       position: relative;
@@ -152,5 +164,17 @@
 
   &__pagination {
     margin-left: -25px;
+
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
+
+    &-nav {
+      justify-content: flex-end;
+
+      @media (max-width: 1400px) {
+        justify-content: center;
+      }
+    }
   }
 }

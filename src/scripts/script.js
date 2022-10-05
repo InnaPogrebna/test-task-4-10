@@ -39,14 +39,14 @@ nextBtn.addEventListener('click', getNext);
 
 function getNext(event) {
   event.preventDefault();
-  prevBtn.classList.remove('disabled', 'disableEl');
+  prevBtn.classList.remove('disabled', 'pagination__item--disabled');
 
   listNumbers[isActive].className = current[0].className.replace('active', '');
   listNumbers[isActive + 1].classList.add('active');
   isActive++;
 
   if (isActive === listNumbers.length - 1) {
-    nextBtn.classList.add('disabled', 'disableEl');
+    nextBtn.classList.add('disabled', 'pagination__item--disabled');
   }
 }
 
@@ -58,7 +58,7 @@ function getPrev(event) {
   isActive--;
 
   if (isActive < 1) {
-    prevBtn.classList.add('disabled', 'disableEl');
+    prevBtn.classList.add('disabled', 'pagination__item--disabled');
   }
   removeDisabledNextBtn();
 }
@@ -69,13 +69,13 @@ listNumbers.forEach((item) => {
     current[0].className = current[0].className.replace('active', '');
     event.currentTarget.classList.add('active');
     isActive = listNumbers.indexOf(event.currentTarget);
-    prevBtn.classList.remove('disabled', 'disableEl');
+    prevBtn.classList.remove('disabled', 'pagination__item--disabled');
     removeDisabledNextBtn();
   });
 });
 
 function removeDisabledNextBtn() {
   if (isActive < listNumbers.length - 1) {
-    nextBtn.classList.remove('disabled', 'disableEl');
+    nextBtn.classList.remove('disabled', 'pagination__item--disabled');
   }
 }

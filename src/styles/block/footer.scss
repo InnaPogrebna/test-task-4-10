@@ -18,6 +18,10 @@
     gap: 12px;
     margin-left: -21px;
 
+    @media (max-width: 992px) {
+      margin-left: -14px;
+    }
+
     &-item {
       @extend %Stolzl-Regular;
       font-size: 14px;
@@ -31,7 +35,7 @@
       }
 
       @media (max-width: 992px) {
-        font-size: 10px;
+        font-size: 9px;
       }
     }
 
